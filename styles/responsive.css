@@ -1,6 +1,6 @@
 /* ─── MOBILE FIRST — breakpoints crescentes ─── */
 
-/* Mobile — foto acima do título na hero */
+/* Mobile — foto acima do título, conteúdo centralizado */
 @media (max-width: 1023px) {
   .hero-container {
     display: flex;
@@ -10,20 +10,95 @@
   .hero-image-wrapper {
     order: -1;
   }
-}
 
-/* Base mobile — melhorias de espaçamento e legibilidade */
-@media (max-width: 479px) {
-  .hero-section {
-    padding-top: calc(86px + 36px);
-  }
-
-  .hero-title {
-    font-size: clamp(2rem, 9vw, 2.6rem);
+  .hero-content {
+    text-align: center;
+    align-items: center;
   }
 
   .hero-subheadline {
-    font-size: 1rem;
+    text-align: center;
+  }
+
+  .hero-badges {
+    justify-content: center;
+  }
+
+  .hero-ctas {
+    justify-content: center;
+  }
+}
+
+/* Mobile ≤767px — hero compacto para CTA aparecer no fold */
+@media (max-width: 767px) {
+  .hero-section {
+    padding-top: calc(136px + 12px);
+    padding-bottom: 56px;
+  }
+
+  .hero-container {
+    gap: 18px;
+  }
+
+  .hero-image-wrapper {
+    max-width: 100%;
+  }
+
+  .hero-image-frame {
+    aspect-ratio: unset;
+    height: 240px;
+  }
+
+  .hero-image-frame img {
+    object-position: center 15%;
+  }
+
+  .hero-content {
+    gap: 16px;
+  }
+
+  .elegant-seal {
+    display: none;
+  }
+
+  .hero-image-caption {
+    display: none;
+  }
+}
+
+/* Base mobile ≤479px */
+@media (max-width: 479px) {
+  .hero-section {
+    padding-top: calc(136px + 8px);
+    padding-bottom: 48px;
+  }
+
+  .hero-container {
+    gap: 14px;
+  }
+
+  .hero-image-frame {
+    height: 200px;
+  }
+
+  .hero-image-frame img {
+    object-position: center 15%;
+  }
+
+  .hero-content {
+    gap: 14px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+
+  .hero-subheadline {
+    font-size: 0.95rem;
+  }
+
+  .hero-badges {
+    display: none;
   }
 
   .hero-ctas {
