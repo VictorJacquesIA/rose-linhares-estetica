@@ -156,6 +156,26 @@ section {
   color: var(--color-text-secondary);
 }
 
+/* Swipe hint — mobile only */
+.carousel-hint {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.35);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  transition: opacity 0.4s ease;
+}
+
+.carousel-hint.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 /* Carousel dots — visíveis só no mobile via responsive.css */
 .features-dots {
   display: none;

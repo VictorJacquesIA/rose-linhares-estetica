@@ -56,7 +56,12 @@ export function initFeaturesCarousel() {
     dots.forEach((dot, i) => dot.classList.toggle('active', i === activeIndex));
   };
 
-  grid.addEventListener('scroll', updateDots, { passive: true });
+  const hint = document.querySelector('.carousel-hint');
+
+  grid.addEventListener('scroll', () => {
+    updateDots();
+    if (hint && grid.scrollLeft > 20) hint.classList.add('hidden');
+  }, { passive: true });
 
   dots.forEach((dot, i) => {
     dot.addEventListener('click', () => {

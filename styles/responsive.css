@@ -215,6 +215,10 @@
   .features-dots {
     display: flex;
   }
+
+  .carousel-hint {
+    display: flex;
+  }
 }
 
 /* 1024px — desktop */
