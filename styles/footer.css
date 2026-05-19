@@ -1,0 +1,143 @@
+.site-footer {
+  background: #0A0A0A;
+  padding: 48px 0 28px;
+}
+
+/* ── Layout mobile: coluna centralizada ── */
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+/* Logo */
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-logo img {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.footer-logo__tagline {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.72rem;
+  color: rgba(212, 175, 55, 0.7);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Nav */
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+}
+
+.footer-nav a {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: var(--color-brand-primary);
+}
+
+/* Social */
+.footer-social {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.footer-social__link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-brand-primary);
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social__link:hover {
+  background: var(--color-brand-primary);
+  color: #0A0A0A;
+  transform: translateY(-3px);
+}
+
+/* Divider */
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.07);
+  margin-bottom: 20px;
+}
+
+/* Copyright */
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-copyright {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ── Desktop: linha horizontal ── */
+@media (min-width: 1024px) {
+  .site-footer {
+    padding: 64px 0 36px;
+  }
+
+  .footer-top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  .footer-logo {
+    align-items: flex-start;
+  }
+
+  .footer-nav {
+    justify-content: center;
+    gap: 12px 28px;
+  }
+
+  .footer-social {
+    justify-content: flex-end;
+  }
+
+  .footer-bottom {
+    justify-content: center;
+  }
+}

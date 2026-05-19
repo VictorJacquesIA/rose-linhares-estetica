@@ -1,0 +1,249 @@
+/* ─── MOBILE FIRST — breakpoints crescentes ─── */
+
+/* Mobile — foto acima do título na hero */
+@media (max-width: 1023px) {
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-image-wrapper {
+    order: -1;
+  }
+}
+
+/* Base mobile — melhorias de espaçamento e legibilidade */
+@media (max-width: 479px) {
+  .hero-section {
+    padding-top: calc(86px + 36px);
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 9vw, 2.6rem);
+  }
+
+  .hero-subheadline {
+    font-size: 1rem;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+  }
+
+  .hero-ctas .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .problema-card,
+  .depoimento-card,
+  .servico-card {
+    padding: 28px 24px;
+  }
+
+  .faq-item__header {
+    padding: 0 20px;
+    height: 62px;
+  }
+
+  .faq-item__answer {
+    padding: 4px 20px 22px;
+  }
+
+  .cta-final-section {
+    padding: 80px 0;
+  }
+}
+
+/* 480px — hero CTAs em linha */
+@media (min-width: 480px) {
+  .hero-ctas {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-badges {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* 600px — grids 2 colunas */
+@media (min-width: 600px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .servicos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 768px — tablet */
+@media (min-width: 768px) {
+  .grid-2x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .depoimentos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta-final-highlights {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px 32px;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mobile-sticky-cta {
+    display: none !important;
+  }
+
+  .steps-line {
+    display: none;
+  }
+}
+
+/* Mobile carousel — features-grid */
+@media (max-width: 1023px) {
+  .features-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+
+  .features-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .feature-item {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+  }
+
+  .features-dots {
+    display: flex;
+  }
+}
+
+/* 1024px — desktop */
+@media (min-width: 1024px) {
+  /* Nav */
+  .nav-links {
+    display: flex;
+  }
+
+  .nav-cta {
+    display: inline-flex;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  /* Hero */
+  .hero-container {
+    grid-template-columns: 55% 45%;
+    gap: 64px;
+  }
+
+  .hero-image-wrapper {
+    margin: 0;
+  }
+
+  /* Solucao */
+  .solucao-container {
+    grid-template-columns: 35% 65%;
+    gap: 80px;
+  }
+
+  .solucao__left {
+    position: sticky;
+    top: 120px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  /* Como funciona — steps horizontal */
+  .steps-container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .steps-line {
+    display: block;
+    position: absolute;
+    top: 22px;
+    left: 24px;
+    right: 24px;
+    bottom: auto;
+    width: auto;
+    height: 1.5px;
+    background: repeating-linear-gradient(
+      to right,
+      var(--color-brand-primary) 0px,
+      var(--color-brand-primary) 4px,
+      transparent 4px,
+      transparent 10px
+    );
+    opacity: 0.4;
+  }
+
+  .step-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 24px;
+    grid-template-columns: unset;
+  }
+
+  .step-item__content {
+    padding-top: 0;
+  }
+
+  /* Depoimentos */
+  .depoimentos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Servicos */
+  .servicos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Footer */
+  .footer-top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .footer-nav {
+    gap: 12px 28px;
+  }
+}
+
+/* Mobile sticky CTA — only on mobile */
+@media (max-width: 767px) {
+  .mobile-sticky-cta {
+    display: flex;
+  }
+}
